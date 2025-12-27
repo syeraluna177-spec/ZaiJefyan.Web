@@ -1,0 +1,239 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Data Diri</title>
+
+<style>
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;500;600&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+body {
+    min-height: 100vh;
+    background: radial-gradient(circle at top, #1e293b, #020617);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow-x: hidden;
+    padding: 40px 0;
+}
+
+/* BACKGROUND GLOW */
+.bg-glow {
+    position: fixed;
+    width: 650px;
+    height: 650px;
+    background: radial-gradient(circle, rgba(56,189,248,0.25), transparent 70%);
+    animation: float 10s ease-in-out infinite;
+    z-index: 1;
+}
+
+@keyframes float {
+    0%,100% { transform: translateY(0); }
+    50% { transform: translateY(-40px); }
+}
+
+/* CONTAINER */
+.container {
+    position: relative;
+    z-index: 2;
+    width: 90%;
+    max-width: 800px;
+    background: rgba(255,255,255,0.06);
+    backdrop-filter: blur(14px);
+    border-radius: 24px;
+    padding: 50px;
+    box-shadow: 0 30px 60px rgba(0,0,0,0.6);
+    animation: scaleIn 1s ease forwards;
+    transform: scale(0.9);
+    opacity: 0;
+}
+
+@keyframes scaleIn {
+    to {
+        transform: scale(1);
+        opacity: 1;
+    }
+}
+
+/* HEADER */
+.header {
+    text-align: center;
+    margin-bottom: 40px;
+}
+
+.header img {
+    width: 120px;
+    height: 120px;
+    border-radius: 50%;
+    object-fit: cover;
+    margin-bottom: 20px;
+    box-shadow: 0 0 25px rgba(56,189,248,0.6);
+}
+
+.header h1 {
+    font-size: 32px;
+    color: #e5e7eb;
+}
+
+.header p {
+    font-size: 14px;
+    color: #9ca3af;
+}
+
+/* SECTION */
+.section {
+    margin-bottom: 35px;
+    animation: reveal 0.8s ease forwards;
+    opacity: 0;
+}
+
+.section:nth-child(2) { animation-delay: 0.3s; }
+.section:nth-child(3) { animation-delay: 0.5s; }
+.section:nth-child(4) { animation-delay: 0.7s; }
+
+@keyframes reveal {
+    from {
+        transform: translateY(15px);
+        opacity: 0;
+    }
+    to {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+
+.section h2 {
+    font-size: 18px;
+    color: #38bdf8;
+    margin-bottom: 12px;
+}
+
+.section p, .section li {
+    font-size: 14px;
+    color: #d1d5db;
+    line-height: 1.7;
+}
+
+/* LIST */
+ul {
+    list-style: none;
+}
+
+ul li::before {
+    content: "•";
+    color: #38bdf8;
+    margin-right: 8px;
+}
+
+/* BUTTON */
+.button {
+    text-align: center;
+    margin-top: 40px;
+}
+
+.button a {
+    display: inline-block;
+    padding: 14px 42px;
+    font-size: 14px;
+    color: #020617;
+    text-decoration: none;
+    background: linear-gradient(135deg, #38bdf8, #0ea5e9);
+    border-radius: 40px;
+    position: relative;
+    overflow: hidden;
+    transition: 0.3s;
+}
+
+.button a::before {
+    content: '';
+    position: absolute;
+    left: -100%;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(
+        120deg,
+        transparent,
+        rgba(255,255,255,0.6),
+        transparent
+    );
+}
+
+.button a:hover::before {
+    left: 100%;
+    transition: 0.6s;
+}
+
+.button a:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 15px 35px rgba(56,189,248,0.6);
+}
+
+/* FOOTER */
+footer {
+    margin-top: 40px;
+    text-align: center;
+    font-size: 12px;
+    color: #6b7280;
+}
+</style>
+</head>
+
+<body>
+
+<div class="bg-glow"></div>
+
+<div class="container">
+
+    <!-- HEADER -->
+    <div class="header">
+        <img src="https://via.placeholder.com/150" alt="Foto Profil">
+        <h1>Zainal Jefi A</h1>
+        <p>Pelajar | Mahasiswa | pekerja</p>
+    </div>
+
+    <!-- DATA DIRI -->
+    <div class="section">
+        <h2>👤 Data Diri</h2>
+        <p>Nama: Zainal Jefi A<br>
+           Tanggal Lahir: 19 11 2006<br>
+           Alamat: Nganjuk , Jawa Timur</p>
+    </div>
+
+    <!-- TENTANG SAYA -->
+    <div class="section">
+        <h2>📖 Tentang Saya</h2>
+        <p>Saya adalah seseorang yang tertarik pada dunia teknologi, desain, dan pengembangan website dengan tampilan modern dan profesional.</p>
+    </div>
+
+    <!-- KEAHLIAN -->
+    <div class="section">
+        <h2>⚙️ Keahlian</h2>
+        <ul>
+            <li>HTML & CSS</li>
+            <li>Desain UI Sederhana</li>
+            <li>Responsive Web</li>
+        </ul>
+    </div>
+
+    <!-- KONTAK -->
+    <div class="button">
+        <a href="https://syeraluna177-spec.github.io/Yz.kaditz/3.html">Lanjut Ke Project</a>
+    </div>
+
+    <footer>
+        © 2025 | ZaiJefyan
+    </footer>
+
+</div>
+
+</body>
+</html>
